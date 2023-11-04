@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" data-provider-thread-count="3">
+    <listeners>
+
+        <listener class-name="com.dastan.listeners.ListenerClass"></listener>
+        <listener class-name="com.dastan.listeners.MethodIntercepter"></listener>
+        <listener class-name="com.dastan.listeners.AnnotationTransformer"></listener>
+
+    </listeners>
+    <test thread-count="1" name="Test" parallel="methods">
+        <classes>
+            <class name="com.dastan.tests.OrangeHRMTests"/>
+            <class name="com.dastan.tests.AmazonDemoTest"/>
+        </classes>
+    </test>
+</suite>
